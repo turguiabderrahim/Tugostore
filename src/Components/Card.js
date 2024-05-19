@@ -8,8 +8,8 @@ const Card = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost/api/api.php');
-      // const response = await fetch('https://fakestoreapi.com/products');
+      // const response = await fetch('http://localhost/api/api.php');
+      const response = await fetch('https://fakestoreapi.com/products');
       const data = await response.json();
       setDataArray(data);
       // console.log(data);
