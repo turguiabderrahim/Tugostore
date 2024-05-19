@@ -1,0 +1,74 @@
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  position: fixed;
+  left: 0;
+  top: 22vh;
+  bottom: 0;
+  opacity: 0.9; /* Adjust the opacity as needed */
+  height: fit-content;
+  height: 100vh;
+  z-index: -2;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 5px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.sidebar ul li a:hover {
+  background-color: #575757;
+  color: #ffeb3b;
+  cursor: pointer;
+}
+
+.sidebar input[type="number"] {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.sidebar input[type="number"]::placeholder {
+  color: #999;
+}
+
+.Button {
+  background-color: orange;
+  color: black;
+  font-weight: 700;
+  width: 87%;
+  overflow: auto;
+  border-radius: 5px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

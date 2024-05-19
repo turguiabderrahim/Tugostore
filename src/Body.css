@@ -1,0 +1,14 @@
+/* .container{
+ top :100px;   
+} */
+.b{
+    padding-top: 20vh;   
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-bottom: auto;
+}
+@media (max-width: 768px) {
+    .b{
+        padding-top: 20vh;
+    };
+}

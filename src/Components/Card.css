@@ -1,0 +1,96 @@
+/* Card container styles */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin-left: 260px; /* Adjust the margin to match the sidebar width */
+  padding: 20px; /* Add padding to separate the cards from the sidebar */
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  border: #666 1px solid;
+  width: 295px;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  height: 300PX;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card-subtitle {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.card-text {
+  margin: 10px 0;
+}
+
+.buy-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(228, 228, 145);
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.card:hover .buy-button {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.buy-button:hover {
+  background-color:#333;
+}
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .card-container {
+    margin-left: 0;
+  }
+
+  .card {
+    flex: 1 1 100%; /* Full width on smaller screens */
+  }
+}

@@ -1,0 +1,249 @@
+/* Header styles */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: top 0.3s; /* Add transition for smooth animation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Container styles */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styles */
+.logo {
+  margin: 0;
+  margin-right: 20px; /* Add space between logo and navigation */
+  margin-left: -150px;
+  color: orange;
+}
+
+/* Navigation styles */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Add space between nav items */
+}
+
+/* Search container styles */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Hide input field initially */
+.search-container input[type="text"] {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 0;
+  opacity: 0;
+  transition: width 0.3s, opacity 0.3s;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+/* Show input field when hovering over search button */
+.search-container button:hover + input[type="text"],
+.search-container input[type="text"]:hover {
+  width: 200px;
+  opacity: 1;
+}
+
+/* Search button styles */
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+/* Anchor styles */
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-left: 10px;
+  font-size: 14px;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+  /* border-bottom: 2px solid grey; */
+}
+
+.nav a:hover {
+  color: #020202;
+  background-color: rgb(247, 238, 238);
+  font-weight: 600;
+}
+
+.nav a:active {
+  color: #007bff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown styles */
+select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 0px solid #ccc;
+  background-color: transparent; /* Set background color to transparent */
+  cursor: pointer;
+  font-size: 14px;
+  appearance: none; /* Remove default arrow */
+}
+
+select:hover,
+select:focus {
+  border-color: #fff; /* Change border color on hover/focus */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Add some space below the logo */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .nav {
+    flex-direction: column; /* Stack nav items vertically */
+    gap: 10px; /* Reduce gap between nav items */
+  }
+
+  input[type="text"] {
+    width: 100%; /* Full width on mobile */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add some space below the input */
+  }
+
+  button[type="submit"] {
+    width: 100%; /* Full width on mobile */
+    margin-bottom: 10px; /* Add some space below the button */
+  }
+
+  .nav a {
+    width: 100%; /* Full width on mobile */
+    text-align: center; /* Center align text */
+    padding: 10px 0; /* Adjust padding for better touch area */
+  }
+}
+.custom-flex-container {
+  display: flex;                   /* Equivalent to 'flex' */
+  height: 2.5rem;                  /* Equivalent to 'h-10' */
+  align-items: center;             /* Equivalent to 'items-center' */
+  justify-content: center;         /* Equivalent to 'justify-center' */
+  /* background-color: #4f46e5;       Equivalent to 'bg-indigo-600' */
+  background-color: orange;       /* Equivalent to 'bg-indigo-600' */
+  padding-left: 1rem;              /* Equivalent to 'px-4' */
+  padding-right: 1rem;             /* Equivalent to 'px-4' */
+  font-size: 0.875rem;             /* Equivalent to 'text-sm' */
+  font-weight: 500;                /* Equivalent to 'font-medium' */
+  color: #ffffff;                  /* Equivalent to 'text-white' */
+}
+
+@media (min-width: 640px) {
+  .custom-flex-container {
+    padding-left: 1.5rem;          /* Equivalent to 'sm:px-6' */
+    padding-right: 1.5rem;         /* Equivalent to 'sm:px-6' */
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom-flex-container {
+    padding-left: 2rem;            /* Equivalent to 'lg:px-8' */
+    padding-right: 2rem;           /* Equivalent to 'lg:px-8' */
+  }
+}
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Add some space below the logo */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .nav, .search-container, .search-container input[type="text"], .search-container button[type="submit"], .nav a, select {
+    display: none; /* Hide all elements except the logo on mobile */
+  }
+}
+
+.custom-flex-container {
+  display: flex; /* Equivalent to 'flex' */
+  height: 2.5rem; /* Equivalent to 'h-10' */
+  align-items: center; /* Equivalent to 'items-center' */
+  justify-content: center; /* Equivalent to 'justify-center' */
+  background-color: orange; /* Equivalent to 'bg-indigo-600' */
+  padding-left: 1rem; /* Equivalent to 'px-4' */
+  padding-right: 1rem; /* Equivalent to 'px-4' */
+  font-size: 0.875rem; /* Equivalent to 'text-sm' */
+  font-weight: 500; /* Equivalent to 'font-medium' */
+  color: #ffffff; /* Equivalent to 'text-white' */
+  animation: pulse 2s infinite; /* Add animation */
+}
+@keyframes pulse {
+  0% {
+    background-color: orange;
+    transform: scale(1);
+  }
+  50% {
+    background-color: #ff8c00;
+    transform: scale(1.05);
+  }
+  100% {
+    background-color: orange;
+    transform: scale(1);
+  }
+}
+
+
+@media (min-width: 640px) {
+  .custom-flex-container {
+    padding-left: 1.5rem; /* Equivalent to 'sm:px-6' */
+    padding-right: 1.5rem; /* Equivalent to 'sm:px-6' */
+  }
+  @keyframes pulse {
+    0% {
+      background-color: orange;
+      transform: scale(1);
+    }
+    50% {
+      background-color: #ff8c00;
+      transform: scale(1.05);
+    }
+    100% {
+      background-color: orange;
+      transform: scale(1);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom-flex-container {
+    padding-left: 2rem; /* Equivalent to 'lg:px-8' */
+    padding-right: 2rem; /* Equivalent to 'lg:px-8' */
+  }
+}
